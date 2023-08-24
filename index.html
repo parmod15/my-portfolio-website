@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio | Parmod</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @keyframes moving {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          /* transform: translateX(3rem); */
+          transform: translateY(8rem);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!--  NAV-BAR SECTION -->
+      <div
+        class="w-full bg-blue-900 text-white font-mullish flex justify-center py-4"
+      >
+        <ul class="w-5/12 flex justify-between">
+          <li>HOME</li>
+          <li class="text-red-400">ABOUT</li>
+          <li>PORTFOLIO</li>
+          <li>BLOG</li>
+          <li>CONTACT</li>
+        </ul>
+      </div>
+
+      <!-- SINGLE GREEN LINE -->
+      <div class="w-full h-1 bg-greenLight"></div>
+
+      <!-- HERO - SECTION -->
+      <div
+        class="w-full h-[100vh] bg-blue-950 text-white font-mullish relative items-center justify-center flex"
+      >
+        <img
+          src="./images/x-flame-1.png"
+          alt=""
+          class="absolute top-0 left-0 animate-pulse rotate-180"
+        />
+        <img
+          src="./images/x-flame-1.png"
+          alt=""
+          class="absolute top-0 right-0 animate-pulse"
+        />
+        <img
+          src="./images/features-wave.svg"
+          alt=""
+          class="w-80 absolute top-2 rotate-12 opacity-10 animate-moving"
+        />
+
+        <!--  TEXT CONTENT -->
+        <div class="flex flex-col gap-4 items-center">
+          <h1 class="text-5xl text-center">
+            Hello, <span class="text-greenLight">I'm Parmod Sharma.</span>
+            <br />
+            I'm a full-stack web developer.
+          </h1>
+          <button
+            class="border-2 text-xl border-slate-400 py-4 px-12 hover:bg-green-500 hover:rounded-md duration-500"
+          >
+            View my work
+          </button>
+        </div>
+      </div>
+
+      <!--  ABOUT - SECTION -->
+
+      <!--  -->
+    </div>
+  </body>
+</html>
