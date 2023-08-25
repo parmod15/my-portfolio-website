@@ -6,6 +6,7 @@
     <title>portfolio | Parmod</title>
     <link rel="stylesheet" href="style.css" />
     <style>
+      /* ANIMATION FOR IMAGES IN HERO SECTION */
       @keyframes moving {
         0% {
           transform: translateY(0);
@@ -19,6 +20,7 @@
         }
       }
 
+      /* PROJECT HOVER TRANSITIONS */
       .project-image {
         opacity: 1;
       }
@@ -39,13 +41,19 @@
       .project-image:hover > .project-image-details {
         opacity: 0.8;
       }
+
+      /*  NAV BAR STICKY POSITION   */
+      .sticky-nav {
+        position: sticky;
+        top: 0;
+      }
     </style>
   </head>
   <body>
     <div id="wrapper">
       <!--  NAV-BAR SECTION -->
       <div
-        class="w-full bg-blue-900 text-white font-mullish flex justify-center py-4"
+        class="nav-bar stick-nav w-full bg-blue-900 text-white font-mullish flex justify-center py-4"
       >
         <ul class="w-5/12 flex justify-between">
           <li>HOME</li>
@@ -432,5 +440,7 @@
 
       <!--  -->
     </div>
+
+    <script type="module" src="index.js"></script>
   </body>
 </html>
