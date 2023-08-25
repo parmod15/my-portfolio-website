@@ -18,6 +18,27 @@
           transform: translateY(0);
         }
       }
+
+      .project-image {
+        opacity: 1;
+      }
+
+      .project-image-details {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        color: black;
+        top: 0;
+        transition: opacity 500ms;
+      }
+      .project-image:hover {
+        opacity: 1;
+      }
+      .project-image:hover > .project-image-details {
+        opacity: 0.8;
+      }
     </style>
   </head>
   <body>
@@ -272,8 +293,8 @@
       </div>
 
       <!--  PROJECTS - SECTION -->
-      <div class="w-full bg-slate-200 py-24">
-        <div class="w-10/12 mx-auto border border-red-500">
+      <div class="w-full bg-slate-200 py-24 font-mullish">
+        <div class="w-10/12 mx-auto flex flex-col gap-20">
           <!-- PROJECTS - WRITTEN -->
           <div
             class="w-[100%] mx-auto flex flex-col justify-center items-center gap-2"
@@ -282,11 +303,131 @@
             <div class="w-20 h-1 bg-slate-700"></div>
           </div>
 
+          <div class="bg-green-500 px-4 text-white w-20 mx-auto text-center">
+            ALL
+          </div>
+
           <!--  PROJECTS- IMAGE CONTAINER -->
-          <div>
-            <img src="./images/beat-project.png" class="w-52 h-40" alt="" />
+          <div class="w-full flex flex-row flex-wrap justify-between">
+            <!-- PROJECT -1  -->
+            <div
+              class="w-[28%] h-60 relative flex project-image hover:animate-bounce"
+            >
+              <img
+                src="./images/beat-project.png"
+                class="w-full h-full"
+                alt=""
+              />
+              <div
+                class="project-image-details flex justify-center items-center text-xl font-bold"
+              >
+                <button class="border-2 border-red-500 px-4 py-2">
+                  Explore
+                </button>
+              </div>
+            </div>
+
+            <!-- PROJECT -2  -->
+            <div
+              class="w-[28%] h-60 relative flex project-image hover:animate-bounce"
+            >
+              <img
+                src="./images/razorpay-project.png"
+                class="w-full h-full"
+                alt=""
+              />
+              <div
+                class="project-image-details flex justify-center items-center text-xl font-bold"
+              >
+                <button class="border-2 border-red-500 px-4 py-2">
+                  Explore
+                </button>
+              </div>
+            </div>
+
+            <!-- PROJECT -3  -->
+            <div
+              class="w-[28%] h-60 relative flex project-image hover:animate-bounce"
+            >
+              <img
+                src="./images/calculator-project.png"
+                class="w-full h-full"
+                alt=""
+              />
+              <div
+                class="project-image-details flex justify-center items-center text-xl font-bold"
+              >
+                <button class="border-2 border-red-500 px-4 py-2">
+                  Explore
+                </button>
+              </div>
+            </div>
+
+            <!-- PROJECT -4  -->
+            <div
+              class="w-[28%] h-60 relative flex project-image mt-12 hover:animate-bounce"
+            >
+              <img
+                src="./images/canva-project.png"
+                class="w-full h-full"
+                alt=""
+              />
+              <div
+                class="project-image-details flex justify-center items-center text-xl font-bold"
+              >
+                <button class="border-2 border-red-500 px-4 py-2">
+                  Explore
+                </button>
+              </div>
+            </div>
+
+            <!-- PROJECT -5  -->
+            <div
+              class="w-[28%] h-60 relative flex project-image mt-12 hover:animate-bounce"
+            >
+              <img
+                src="./images/gym-project.png"
+                class="w-full h-full"
+                alt=""
+              />
+              <div
+                class="project-image-details flex justify-center items-center text-xl font-bold"
+              >
+                <button class="border-2 border-red-500 px-4 py-2">
+                  Explore
+                </button>
+              </div>
+            </div>
+
+            <!-- PROJECT -6  -->
+            <div
+              class="w-[28%] h-60 relative flex project-image mt-12 hover:animate-bounce"
+            >
+              <img
+                src="./images/trendTracker-project.png"
+                class="w-full h-full"
+                alt=""
+              />
+              <div
+                class="project-image-details flex justify-center items-center text-xl font-bold"
+              >
+                <button class="border-2 border-red-500 px-4 py-2">
+                  Explore
+                </button>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+
+      <!-- BLOG - SECTION -->
+      <div>
+        <div></div>
+        <!--  
+          *
+          *
+          IMAGE LGA LENA RAZORPAY WALI BLUE GRAPHIC WALI
+         -->
       </div>
 
       <!--  -->
