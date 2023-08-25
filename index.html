@@ -42,8 +42,31 @@
         opacity: 0.8;
       }
 
+      /* SKILL IMAGES ANIMATION */
+      @keyframes rotatespin {
+        0% {
+          transform: rotateY(0deg);
+        }
+        50% {
+          transform: rotateY(90deg);
+        }
+        100% {
+          transform: rotateY(0deg);
+        }
+      }
+
+      /* SKILL IMAGES CLASS */
+      .img-animation {
+        animation-name: rotatespin;
+        animation-duration: 500ms;
+        animation-timing-function: ease-OUT;
+        filter: blur(0px);
+        transition: filter 1.3s;
+      }
+
       /*  NAV BAR STICKY POSITION   */
       .sticky-nav {
+        z-index: 100;
         position: sticky;
         top: 0;
       }
@@ -104,7 +127,7 @@
       </div>
 
       <!--  ABOUT - SECTION -->
-      <div class="w-full overflow-x-hidden py-24">
+      <div class="about-section w-full overflow-x-hidden py-24">
         <div
           class="w-11/12 flex flex-col items-center mx-auto font-mullish gap-16"
         >
@@ -117,11 +140,11 @@
           <!-- SERVICE - PROVIDED - CONTAINER-->
           <div class="flex w-11/12 justify-between">
             <!-- 1st - SERVICE -->
-            <div class="w-60 flex flex-col justify-center items-center">
+            <div class="w-60 flex flex-col gap-4 justify-center items-center">
               <img
-                src="./images/responsive.jpg"
+                src="./images/responsive.png"
                 alt=""
-                class="rounded-full w-32"
+                class="skill-img blur-sm rounded-full w-28"
               />
 
               <!--  hexagon div container -->
@@ -140,7 +163,7 @@
               </div> -->
 
               <div class="h-20 text-center">
-                <h3 class="font-bold">Responsive</h3>
+                <h3 class="font-bold mb-4">Responsive</h3>
                 <p class="opacity-80 text-[15px]">
                   My design adapts all sceen Sizes.
                 </p>
@@ -148,11 +171,11 @@
             </div>
 
             <!-- 2st - SERVICE -->
-            <div class="w-60 flex flex-col justify-center items-center">
+            <div class="w-60 flex flex-col gap-4 justify-center items-center">
               <img
-                src="./images/dynamic.jpg"
+                src="./images/dynamic.png"
                 alt=""
-                class="rounded-full w-32"
+                class="skill-img blur-sm rounded-full w-28"
               />
               <div class="h-20 text-center">
                 <h3 class="font-bold">Dynamic</h3>
@@ -164,24 +187,28 @@
 
             <!-- 3st - SERVICE -->
             <div
-              class="w-60 flex flex-col justify-center items-center relative"
+              class="w-60 flex flex-col gap-4 justify-center items-center relative"
             >
-              <img src="./images/design.jpg" alt="" class="rounded-full w-28" />
+              <img
+                src="./images/design.png"
+                alt=""
+                class="skill-img blur-sm rounded-full w-28 top-3 relative"
+              />
               <div class="h-24 text-center">
                 <h3 class="font-bold">Design</h3>
                 <p class="opacity-80 text-[15px]">
-                  My design process involves wireframing,sketches and then final
+                  My design process involves wireframing,sketches then final
                   Design.
                 </p>
               </div>
             </div>
 
             <!-- 4st - SERVICE -->
-            <div class="w-60 flex flex-col justify-center items-center">
+            <div class="w-60 flex flex-col gap-4 justify-center items-center">
               <img
-                src="./images/interactive.jpg"
+                src="./images/interactive.png"
                 alt=""
-                class="rounded-full w-36"
+                class="skill-img blur-sm rounded-full w-32"
               />
               <div class="h-24 text-center">
                 <h3 class="font-bold">Interactive</h3>
