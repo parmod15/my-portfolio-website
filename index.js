@@ -2,6 +2,15 @@ const navBar = document.querySelector(".nav-bar");
 const wrapper = document.querySelector("#wrapper");
 const aboutSection = document.querySelector(".about-section");
 const allSkillImages = document.querySelectorAll(".skill-img");
+const techStack = document.querySelector(".tech-stack");
+const htmlSkill = document.querySelector(".html-skill");
+const cssSkill = document.querySelector(".css-skill");
+const jsSkill = document.querySelector(".js-skill");
+const reactSkill = document.querySelector(".react-skill");
+const nodeSkill = document.querySelector(".node-skill");
+const sqlSkill = document.querySelector(".sql-skill");
+const uiSkill = document.querySelector(".ui-skill");
+const javaSkill = document.querySelector(".java-skill");
 
 // IMPLEMENTED NAVBAR STICKY POSITION ON SCROLL
 const navOptions = {
@@ -49,3 +58,32 @@ const skillImageObserver = new IntersectionObserver(
 );
 
 skillImageObserver.observe(aboutSection);
+
+// IMPLEMENTED PROJECT-IMAGES ANIMATION ON SCROLLING
+const techOption = {
+  root: null,
+  threshold: 0.5,
+};
+
+const techCallback = (entries) => {
+  const [entry] = entries;
+  //   EARLY RETURN
+  if (!entry.isIntersecting) return;
+
+  if (entry.isIntersecting) {
+    htmlSkill.classList.add("html-skill-width");
+    cssSkill.classList.add("css-skill-width");
+    jsSkill.classList.add("javascript-skill-width");
+    reactSkill.classList.add("react-skill-width");
+    nodeSkill.classList.add("node-skill-width");
+    sqlSkill.classList.add("sql-skill-width");
+    uiSkill.classList.add("ui-skill-width");
+    javaSkill.classList.add("java-skill-width");
+  }
+  techObserver.unobserve(entry.target);
+};
+
+// OBSERVER
+const techObserver = new IntersectionObserver(techCallback, techOption);
+
+techObserver.observe(techStack);
