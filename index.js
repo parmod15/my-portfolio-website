@@ -11,6 +11,9 @@ const nodeSkill = document.querySelector(".node-skill");
 const sqlSkill = document.querySelector(".sql-skill");
 const uiSkill = document.querySelector(".ui-skill");
 const javaSkill = document.querySelector(".java-skill");
+const detailsContainer = document.querySelector(".details-container");
+const myImage = document.querySelector(".my-image");
+const headingDetails = document.querySelector(".heading-details");
 
 // IMPLEMENTED NAVBAR STICKY POSITION ON SCROLL
 const navOptions = {
@@ -79,6 +82,11 @@ const techCallback = (entries) => {
     sqlSkill.classList.add("sql-skill-width");
     uiSkill.classList.add("ui-skill-width");
     javaSkill.classList.add("java-skill-width");
+
+    // CSS ANIMATION OF MY DETAILS
+    detailsContainer.classList.add("my-details-container");
+    myImage.classList.add("image-my-details");
+    headingDetails.classList.add("heading-my-details");
   }
   techObserver.unobserve(entry.target);
 };

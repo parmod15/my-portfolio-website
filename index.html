@@ -109,6 +109,62 @@
         transition: width 1s;
       }
 
+      /* MY DETAILS CLASS WITH ANIMATION */
+      .image-my-details {
+        animation-name: image-round;
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-iteration-count: 2;
+        animation-timing-function: linear;
+      }
+      @keyframes image-round {
+        0% {
+          border-radius: 0%;
+        }
+        20% {
+          border-radius: 5rem;
+        }
+        30% {
+          border-radius: 5rem;
+        }
+        100% {
+          border-radius: 0%;
+        }
+      }
+
+      .heading-my-details {
+        animation-name: details-changer;
+        animation-duration: 5s;
+        animation-delay: 5;
+        animation-iteration-count: 2;
+        animation-timing-function: ease-in-out;
+      }
+      @keyframes details-changer {
+        0% {
+        }
+        50% {
+          text-align: center;
+          margin-left: 40px;
+        }
+      }
+
+      .my-details-container {
+        animation-name: display-changer;
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+      }
+      @keyframes display-changer {
+        0% {
+          display: flex;
+          flex-direction: row;
+        }
+        50% {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
       /*  */
     </style>
   </head>
@@ -265,18 +321,21 @@
               *
              -->
             <!-- RIGHT - SIDE - MY-DETAILS - CONTAINER -->
-            <div class="flex flex-col w-[40%] items-center gap-2">
-              <img src="./images/my-image.png" class="w-64" alt="" />
-
-              <h1 class="font-bold text-xl text-gray-600">Parmod sharma</h1>
-              <p class="fonlg opacity-60">
-                I'm a Full-Stack Developer . I have serious passion for UI
-                effects , animations .And i like to write backend logic as well
-                .
-                <a class="text-blue-500" target="_blank" href=""
-                  >Let me work for you</a
-                >
-              </p>
+            <div
+              class="details-container flex flex-row w-[40%] items-center justify-center gap-5 rounded-md shadow-xl bg-slate-50"
+            >
+              <img src="./images/my-image-2.jpg" class="my-image w-40" alt="" />
+              <div class="heading-details">
+                <h1 class="font-bold text-xl text-gray-600">Parmod sharma</h1>
+                <p class="font-lg opacity-60">
+                  I'm a Full-Stack Developer . I have serious passion for UI
+                  effects , animations .And i like to write backend logic as
+                  well .
+                  <a class="text-blue-500" target="_blank" href=""
+                    >Let me work for you</a
+                  >
+                </p>
+              </div>
             </div>
 
             <!-- LEFT - SIDE TECH-STACK CONTAINER -->
