@@ -3,6 +3,7 @@ const wrapper = document.querySelector("#wrapper");
 const aboutSection = document.querySelector(".about-section");
 const allSkillImages = document.querySelectorAll(".skill-img");
 const techStack = document.querySelector(".tech-stack");
+const techContainer = document.querySelector(".tech-container");
 const htmlSkill = document.querySelector(".html-skill");
 const cssSkill = document.querySelector(".css-skill");
 const jsSkill = document.querySelector(".js-skill");
@@ -14,6 +15,10 @@ const javaSkill = document.querySelector(".java-skill");
 const detailsContainer = document.querySelector(".details-container");
 const myImage = document.querySelector(".my-image");
 const headingDetails = document.querySelector(".heading-details");
+const projectSection = document.querySelector(".project-section");
+const projectImageContainer = document.querySelector(
+  ".project-image-container"
+);
 
 // IMPLEMENTED NAVBAR STICKY POSITION ON SCROLL
 const navOptions = {
@@ -83,6 +88,10 @@ const techCallback = (entries) => {
     uiSkill.classList.add("ui-skill-width");
     javaSkill.classList.add("java-skill-width");
 
+    // CSS ANIMATION ON IMAGE AND TECH STACK
+    techContainer.classList.remove("hidden-display-right");
+    detailsContainer.classList.remove("hidden-display-left");
+
     // CSS ANIMATION OF MY DETAILS
     detailsContainer.classList.add("my-details-container");
     myImage.classList.add("image-my-details");
@@ -95,3 +104,28 @@ const techCallback = (entries) => {
 const techObserver = new IntersectionObserver(techCallback, techOption);
 
 techObserver.observe(techStack);
+
+// IMPLEMENTED PROJECT-SECTION ANIMATION ON SCROLLING
+const projectImageOptions = {
+  root: null,
+  threshold: 0.5,
+};
+
+const projectImageCallback = (entries) => {
+  const [entry] = entries;
+  //   EARLY RETURN
+  if (!entry.isIntersecting) return;
+
+  if (entry.isIntersecting) {
+    projectImageContainer.classList.remove("display-hidden");
+  }
+  projectImageObserver.unobserve(entry.target);
+};
+
+// OBSERVER
+const projectImageObserver = new IntersectionObserver(
+  projectImageCallback,
+  projectImageOptions
+);
+
+projectImageObserver.observe(projectSection);
