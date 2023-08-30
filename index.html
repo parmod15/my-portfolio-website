@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css" />
 
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       /* ANIMATION FOR IMAGES IN HERO SECTION */
       @keyframes moving {
         0% {
@@ -188,11 +191,13 @@
         class="nav-bar w-full relative bg-blue-900 text-white font-mullish flex justify-center py-4"
       >
         <ul class="w-5/12 flex justify-between">
-          <li>HOME</li>
-          <li class="text-red-400">ABOUT</li>
-          <li>PORTFOLIO</li>
-          <li>BLOG</li>
-          <li>CONTACT</li>
+          <li><a href="#home" class="cursor-pointer">HOME</a></li>
+          <li class="text-red-400">
+            <a href="#about" class="cursor-pointer">ABOUT</a>
+          </li>
+          <li><a href="#project" class="cursor-pointer">PORTFOLIO</a></li>
+          <li><a href="#blog" class="cursor-pointer">BLOG</a></li>
+          <li><a href="#contact" class="cursor-pointer">CONTACT</a></li>
         </ul>
       </div>
 
@@ -201,6 +206,7 @@
 
       <!-- HERO - SECTION -->
       <div
+        id="home"
         class="w-full h-[100vh] bg-blue-950 text-white font-mullish relative items-center justify-center flex"
       >
         <img
@@ -236,7 +242,7 @@
       </div>
 
       <!--  ABOUT - SECTION -->
-      <div class="about-section w-full overflow-x-hidden py-24">
+      <div id="about" class="about-section w-full overflow-x-hidden py-24">
         <div
           class="w-11/12 flex flex-col items-center mx-auto font-mullish gap-16"
         >
@@ -442,7 +448,10 @@
       </div>
 
       <!--  PROJECTS - SECTION -->
-      <div class="project-section w-full bg-slate-200 py-24 font-mullish">
+      <div
+        id="project"
+        class="project-section w-full bg-slate-200 py-24 font-mullish"
+      >
         <div class="w-10/12 mx-auto flex flex-col gap-20">
           <!-- PROJECTS - WRITTEN -->
           <div
@@ -570,7 +579,7 @@
       </div>
 
       <!-- BLOGS - SECTION -->
-      <div class="w-full py-24 font-mullish">
+      <div id="blog" class="w-full py-24 font-mullish">
         <div class="w-11/12 mx-auto">
           <!-- BLOGS - WRITTEN -->
           <div
@@ -623,7 +632,10 @@
       </div>
 
       <!-- CONTACT - SECTION -->
-      <div class="w-full pt-24 font-mullish relative overflow-hidden">
+      <div
+        id="contact"
+        class="w-full pt-24 font-mullish relative overflow-hidden"
+      >
         <div class="w-11/12 mx-auto">
           <!-- BACKGROUND IMAGE -->
           <div>
