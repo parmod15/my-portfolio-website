@@ -35,7 +35,7 @@ navObserver.observe(aboutSection);
 
 //
 
-// IMPLEMENTED PROJECT-IMAGES ANIMATION ON SCROLLING
+// IMPLEMENTED SKILL-IMAGES ANIMATION ON SCROLLING
 const skillImageOptions = {
   root: null,
   threshold: 0.5,
@@ -62,7 +62,7 @@ const skillImageObserver = new IntersectionObserver(
 
 skillImageObserver.observe(aboutSection);
 
-// IMPLEMENTED PROJECT-IMAGES ANIMATION ON SCROLLING
+// IMPLEMENTED TECH - STACK ANIMATION ON SCROLLING
 const techOption = {
   root: null,
   threshold: 0.5,
