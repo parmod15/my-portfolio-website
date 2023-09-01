@@ -19,6 +19,8 @@ const projectSection = document.querySelector(".project-section");
 const projectImageContainer = document.querySelector(
   ".project-image-container"
 );
+const contactSection = document.querySelector(".contact-section");
+const contactForm = document.querySelector(".contact-form");
 
 // IMPLEMENTED NAVBAR STICKY POSITION ON SCROLL
 const navOptions = {
@@ -129,3 +131,28 @@ const projectImageObserver = new IntersectionObserver(
 );
 
 projectImageObserver.observe(projectSection);
+
+// IMPLEMENTED CONTACT-SECTION ANIMATION ON SCROLLING
+const contactSectionOptions = {
+  root: null,
+  threshold: 0.5,
+};
+
+const contactSectionCallback = (entries) => {
+  const [entry] = entries;
+  //   EARLY RETURN
+  if (!entry.isIntersecting) return;
+
+  if (entry.isIntersecting) {
+    contactForm.classList.add("scale-class");
+  }
+  contactSectionObserver.unobserve(entry.target);
+};
+
+// OBSERVER
+const contactSectionObserver = new IntersectionObserver(
+  contactSectionCallback,
+  contactSectionOptions
+);
+
+contactSectionObserver.observe(contactSection);

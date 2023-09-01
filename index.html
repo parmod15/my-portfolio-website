@@ -181,6 +181,23 @@
         opacity: 0;
       }
 
+      /* SCALE CLASS FOR CONTACT-FORM */
+      .scale-class {
+        animation-name: scale;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+      }
+      @keyframes scale {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
       /*  */
     </style>
   </head>
@@ -676,7 +693,7 @@
           </h1>
 
           <!-- CONTACT FORM -->
-          <div class="py-12 w-4/12 flex flex-col gap-4 mx-auto">
+          <div class="contact-form py-12 w-4/12 flex flex-col gap-4 mx-auto">
             <input
               type="text"
               placeholder="Name"
