@@ -73,7 +73,6 @@
         z-index: 100;
         position: sticky;
         top: 0;
-        transform: scale(1.1);
         transition: all;
         transition-duration: 100ms;
       }
@@ -202,7 +201,8 @@
     </style>
   </head>
   <body>
-    <div id="wrapper">
+    <!-- WRAPPER -->
+    <div id="wrapper " class="overflohidden">
       <!--  NAV-BAR SECTION -->
       <div
         class="nav-bar w-full relative bg-blue-900 text-white font-mullish flex justify-center py-4"
@@ -259,7 +259,7 @@
       </div>
 
       <!--  ABOUT - SECTION -->
-      <div id="about" class="about-section w-full overflow-x-hidden py-24">
+      <div id="about" class="about-section w-full py-24">
         <div
           class="w-11/12 flex flex-col items-center mx-auto font-mullish gap-16"
         >
@@ -352,7 +352,9 @@
           </div>
 
           <!-- TECH - STACK - CONTAINER -->
-          <div class="tech-stack flex w-11/12 justify-between">
+          <div
+            class="overflow-x-hidden tech-stack flex w-11/12 justify-between"
+          >
             <!-- 
               *
              -->
