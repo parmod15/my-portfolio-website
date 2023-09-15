@@ -112,13 +112,13 @@
       }
 
       /* MY DETAILS CLASS WITH ANIMATION */
-      .image-my-details {
+      /* .image-my-details {
         animation-name: image-round;
         animation-duration: 5s;
         animation-delay: 1s;
-        animation-iteration-count: 2;
+        animation-iteration-count: 1;
         animation-timing-function: linear;
-      }
+      } */
       @keyframes image-round {
         0% {
           border-radius: 0%;
@@ -134,13 +134,13 @@
         }
       }
 
-      .heading-my-details {
+      /* .heading-my-details {
         animation-name: details-changer;
         animation-duration: 5s;
         animation-delay: 5;
-        animation-iteration-count: 2;
+        animation-iteration-count: 1;
         animation-timing-function: ease-in-out;
-      }
+      } */
       @keyframes details-changer {
         0% {
         }
@@ -149,13 +149,13 @@
           margin-left: 40px;
         }
       }
-
+      /* 
       .my-details-container {
         animation-name: display-changer;
         animation-duration: 4s;
         animation-iteration-count: 1;
         animation-timing-function: ease-in;
-      }
+      } */
       @keyframes display-changer {
         0% {
           display: flex;
@@ -205,7 +205,7 @@
     <div id="wrapper " class="overflohidden">
       <!--  NAV-BAR SECTION -->
       <div
-        class="nav-bar w-full relative bg-blue-900 text-white font-mullish flex justify-center py-4"
+        class="nav-bar w-full relative bg-white shadow-lg font-mullish flex justify-center py-4"
       >
         <ul class="w-5/12 flex justify-between">
           <li><a href="#home" class="cursor-pointer">HOME</a></li>
@@ -224,12 +224,12 @@
       <!-- HERO - SECTION -->
       <div
         id="home"
-        class="w-full h-[100vh] bg-blue-950 text-white font-mullish relative items-center justify-center flex"
+        class="w-full h-[100vh] bg-white font-mullish relative items-center justify-center flex"
       >
         <img
           src="./images/x-flame-1.png"
           alt=""
-          class="absolute top-0 left-0 animate-pulse rotate-180"
+          class="absolute -top-4 left-7 animate-pulse rotate-[100deg]"
         />
         <img
           src="./images/x-flame-1.png"
@@ -243,20 +243,23 @@
         />
 
         <!--  TEXT CONTENT -->
-        <div class="flex flex-col gap-4 items-center">
-          <h1 class="text-5xl text-center">
+        <div class="flex flex-col gap-3 items-center">
+          <h1 class="text-5xl text-center text-slate-400">
             Hello,
-            <span class="text-greenLight">I'm Parmod Sharma.</span>
-            <br />
+            <span class="mb-20 text-greenLight">I'm Parmod Sharma.</span>
+          </h1>
+          <h1 class="text-5xl text-center text-slate-400">
             I'm a full-stack web developer.
           </h1>
           <button
-            class="border-2 text-xl border-slate-400 py-4 px-12 hover:bg-green-500 hover:border-opacity-0 duration-500"
+            class="mt-2 border-2 text-xl rounded-md hover:rounded-none border-green-500 py-4 px-12 hover:bg-green-500 hover:border-opacity-0 hover:text-white duration-500"
           >
             View my work
           </button>
         </div>
       </div>
+
+      <hr />
 
       <!--  ABOUT - SECTION -->
       <div id="about" class="about-section w-full py-24">
@@ -360,12 +363,12 @@
              -->
             <!-- LEFT - SIDE - MY-DETAILS - CONTAINER -->
             <div
-              class="hidden-display-left details-container transition-all duration-1000 flex flex-row w-[40%] items-center justify-center gap-5 rounded-md shadow-xl bg-slate-50"
+              class="hidden-display-left details-container transition-all duration-1000 flex flex-col w-[40%] items-center justify-center gap-5 rounded-md shadow-xl"
             >
-              <img src="./images/my-image-2.jpg" class="my-image w-40" alt="" />
-              <div class="heading-details">
+              <img src="./images/my-image.png" class="my-image w-64" alt="" />
+              <div class="heading-details text-center">
                 <h1 class="font-bold text-xl text-gray-600">Parmod sharma</h1>
-                <p class="font-lg opacity-60">
+                <p class="text-slate-600 opacity-80 font-extralight">
                   I'm a Full-Stack Developer . I have serious passion for UI
                   effects , animations .And i like to write backend logic as
                   well .
