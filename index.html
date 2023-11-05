@@ -10,6 +10,16 @@
       html {
         scroll-behavior: smooth;
       }
+
+      /*  animationof small nav for mobile phones */
+      .small-nav-animation {
+        transform: translateX(-1200px);
+        position: absolute;
+        top: 0;
+        transition: all;
+        transition-duration: 500ms;
+      }
+
       /* ANIMATION FOR IMAGES IN HERO SECTION */
       @keyframes moving {
         0% {
@@ -205,9 +215,30 @@
     <div id="wrapper " class="overflohidden">
       <!--  NAV-BAR SECTION -->
       <div
-        class="nav-bar w-full relative bg-white shadow-lg font-mullish flex justify-center py-4"
+        class="nav-bar w-full relative bg-white shadow-lg font-mullish flex md:justify-center py-4"
       >
-        <ul class="w-5/12 flex justify-between">
+        <!--  nav items for bigger display -->
+        <ul class="hidden w-5/12 md:flex justify-between">
+          <li><a href="#home" class="cursor-pointer">HOME</a></li>
+          <li class="text-red-400">
+            <a href="#about" class="cursor-pointer">ABOUT</a>
+          </li>
+          <li><a href="#project" class="cursor-pointer">PORTFOLIO</a></li>
+          <li><a href="#blog" class="cursor-pointer">BLOG</a></li>
+          <li><a href="#contact" class="cursor-pointer">CONTACT</a></li>
+        </ul>
+
+        <!--  hamburger menu icon -->
+        <img
+          class="hamburger-menu flex md:hidden w-10 absolute -top-1 right-0"
+          src="./images/download.png"
+          alt=""
+        />
+
+        <!--  phone view of navbar -->
+        <ul
+          class="py-8 z-50 absolute top-0 h-[100vh] gap-10 bg-gray-400 px-4 transition-all duration-200 small-nav-animation small-nav-items md:hidden w-5/12 flex flex-col"
+        >
           <li><a href="#home" class="cursor-pointer">HOME</a></li>
           <li class="text-red-400">
             <a href="#about" class="cursor-pointer">ABOUT</a>
@@ -219,7 +250,7 @@
       </div>
 
       <!-- SINGLE GREEN LINE -->
-      <div class="w-full h-1 bg-greenLight"></div>
+      <div class="w-[100vw] h-1 bg-greenLight"></div>
 
       <!-- HERO - SECTION -->
       <div
@@ -229,12 +260,12 @@
         <img
           src="./images/x-flame-1.png"
           alt=""
-          class="absolute -top-4 left-7 animate-pulse rotate-[100deg]"
+          class="hidden md:flex absolute -top-4 left-7 animate-pulse rotate-[100deg]"
         />
         <img
           src="./images/x-flame-1.png"
           alt=""
-          class="absolute top-0 right-0 animate-pulse"
+          class="hidden md:flex absolute top-0 right-0 animate-pulse"
         />
         <img
           src="./images/features-wave.svg"
@@ -252,7 +283,7 @@
             I'm a full-stack web developer.
           </h1>
           <button
-            class="mt-2 border-2 text-xl rounded-md hover:rounded-none border-green-500 py-4 px-12 hover:bg-green-500 hover:border-opacity-0 hover:text-white duration-500"
+            class="mt-2 border-2 text-xl rounded-md hover:rounded-none border-green-500 py-4 px-12 :hover:bg-green-500 hover:border-opacity-0 hover:text-white duration-500"
           >
             View my work
           </button>

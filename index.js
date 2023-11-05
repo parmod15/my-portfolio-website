@@ -1,5 +1,7 @@
 const navBar = document.querySelector(".nav-bar");
 const wrapper = document.querySelector("#wrapper");
+const hamburger = document.querySelector(".hamburger-menu");
+const smallNavItems = document.querySelector(".small-nav-items");
 const aboutSection = document.querySelector(".about-section");
 const allSkillImages = document.querySelectorAll(".skill-img");
 const techStack = document.querySelector(".tech-stack");
@@ -21,6 +23,12 @@ const projectImageContainer = document.querySelector(
 );
 const contactSection = document.querySelector(".contact-section");
 const contactForm = document.querySelector(".contact-form");
+
+//  hamburger menu for small displays
+hamburger.addEventListener("click", function () {
+  console.log("clicked menu");
+  smallNavItems.classList.toggle("small-nav-animation");
+});
 
 // IMPLEMENTED NAVBAR STICKY POSITION ON SCROLL
 const navOptions = {
@@ -45,11 +53,12 @@ navObserver.observe(aboutSection);
 // IMPLEMENTED SKILL-IMAGES ANIMATION ON SCROLLING
 const skillImageOptions = {
   root: null,
-  threshold: 0.5,
+  threshold: 0.1,
 };
 
 const skillImageCallback = (entries) => {
   const [entry] = entries;
+
   //   EARLY RETURN
   if (!entry.isIntersecting) return;
 
@@ -81,6 +90,7 @@ const techCallback = (entries) => {
   if (!entry.isIntersecting) return;
 
   if (entry.isIntersecting) {
+    console.log("tech-stack intersecting");
     htmlSkill.classList.add("html-skill-width");
     cssSkill.classList.add("css-skill-width");
     jsSkill.classList.add("javascript-skill-width");
